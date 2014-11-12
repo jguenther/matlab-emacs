@@ -4478,29 +4478,29 @@ in a popup buffer.
       (comint-read-input-ring t))
   (make-local-variable 'gud-marker-acc)
   (easy-menu-define
-   matlab-shell-menu
-   matlab-shell-mode-map
-   "MATLAB shell menu"
-   '("MATLAB"
-     ["Goto last error" matlab-shell-last-error t]
-     "----"
-     ["Stop On Errors" matlab-shell-dbstop-error t]
-     ["Don't Stop On Errors" matlab-shell-dbclear-error t]
-     "----"
-     ["Run Command" matlab-shell-run-command t]
-     ["Describe Variable" matlab-shell-describe-variable t]
-     ["Describe Command" matlab-shell-describe-command t]
-     ["Lookfor Command" matlab-shell-apropos t]
-     ["Topic Browser" matlab-shell-topic-browser t]
-     "----"
-     ["Demos" matlab-shell-demos t]
-     ["Close Current Figure" matlab-shell-close-current-figure t]
-     ["Close Figures" matlab-shell-close-figures t]
-     "----"
-     ["Customize" (customize-group 'matlab-shell)
-      (and (featurep 'custom) (fboundp 'custom-declare-variable))
-      ]
-     ["Exit" matlab-shell-exit t]))
+    matlab-shell-menu
+    matlab-shell-mode-map
+    "MATLAB shell menu"
+    '("MATLAB"
+      ["Goto last error" matlab-shell-last-error t]
+      "----"
+      ["Stop On Errors" matlab-shell-dbstop-error t]
+      ["Don't Stop On Errors" matlab-shell-dbclear-error t]
+      "----"
+      ["Run Command" matlab-shell-run-command t]
+      ["Describe Variable" matlab-shell-describe-variable t]
+      ["Describe Command" matlab-shell-describe-command t]
+      ["Lookfor Command" matlab-shell-apropos t]
+      ["Topic Browser" matlab-shell-topic-browser t]
+      "----"
+      ["Demos" matlab-shell-demos t]
+      ["Close Current Figure" matlab-shell-close-current-figure t]
+      ["Close Figures" matlab-shell-close-figures t]
+      "----"
+      ["Customize" (customize-group 'matlab-shell)
+       (and (featurep 'custom) (fboundp 'custom-declare-variable))
+       ]
+      ["Exit" matlab-shell-exit t]))
   (easy-menu-add matlab-shell-menu matlab-shell-mode-map)
   
   (if matlab-shell-enable-gud-flag

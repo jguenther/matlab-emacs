@@ -21,7 +21,7 @@ LOADDIRS=.
 misc_MISC=ChangeLog ChangeLog.old1 ChangeLog.old2 INSTALL README dl_emacs_support.m
 lisp_LISP=matlab.el mlint.el tlc.el matlab-publish.el linemark.el
 cedet_LISP=semantic-matlab.el semanticdb-matlab.el cedet-matlab.el company-matlab-shell.el
-VERSION=3.3.2
+VERSION=3.3.2-MATLAB_R2010b
 DISTDIR=$(top)matlab-emacs-$(VERSION)
 
 

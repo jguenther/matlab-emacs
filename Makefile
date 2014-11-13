@@ -22,7 +22,8 @@ misc_MISC=ChangeLog ChangeLog.old1 ChangeLog.old2 INSTALL README dl_emacs_suppor
 lisp_LISP=matlab.el mlint.el tlc.el matlab-publish.el linemark.el
 cedet_LISP=semantic-matlab.el semanticdb-matlab.el cedet-matlab.el company-matlab-shell.el
 VERSION=3.3.2-MATLAB_R2010b
-DISTDIR=$(top)matlab-emacs-$(VERSION)
+DISTBASE=matlab-emacs-$(VERSION)
+DISTDIR=$(top)$(DISTBASE)
 
 
 
@@ -73,7 +74,7 @@ dist: autoloads
 	cp matlab-load.el $(misc_MISC) $(lisp_LISP) $(cedet_LISP) $(ede_FILES) $(DISTDIR)
 	$(MAKE) -C toolbox $(MFLAGS) DISTDIR=$(DISTDIR)/toolbox dist
 	$(MAKE) -C templates $(MFLAGS) DISTDIR=$(DISTDIR)/templates dist
-	tar -cvzf $(DISTDIR).tar.gz $(DISTDIR)
+	tar -cvzf $(DISTDIR).tar.gz $(DISTBASE)
 	rm -rf $(DISTDIR)
 
 Makefile: Project.ede
